@@ -30,6 +30,6 @@ async def on_ready():
 async def start(ctx, *, text: str):
     TextAnalysis(text, ctx.author.name)
     view = PersistentView(ctx.author.name)
-    await ctx.send("I received your message? What would you like me to do with it?", view=view)
+    await ctx.send("I got your message! What do you want me to do with it?", view=view)
 
 bot.run(token)
