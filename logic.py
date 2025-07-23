@@ -15,7 +15,7 @@ class TextAnalysis():
         self.text = text
         self.translation = self.__translate(self.text, "en", "es")
 
-        if self.text in questions.keys():
+        if self.text.lower() in questions.keys():
             self.response = questions[self.text]
         else:
             self.response = self.get_answer() 
